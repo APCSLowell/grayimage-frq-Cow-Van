@@ -25,7 +25,7 @@ public class GrayImage
     /* to be implemented in part A */
     int count = 0;
     
-    for (int[] pixelRow : indexValues) {
+    for (int[] pixelRow : pixelValues) {
       for (int pixel : pixelRow) {
         count += pixel / 255;
       }
