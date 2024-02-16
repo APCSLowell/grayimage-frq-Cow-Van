@@ -19,7 +19,7 @@ public class Tester {
                     {84,130,255,130,84}};
       GrayImage image = new GrayImage(pixels1);
       int result = image.countWhitePixels();
-      assertEquals("Test failed: Expected output 5 from countWhitePixels() but " + result + " was returned",5,image.countWhitePixels());
+      assertEquals(5,image.countWhitePixels(),"Test failed: Expected output 5 from countWhitePixels() but " + result + " was returned");
    }
 
    @Test
