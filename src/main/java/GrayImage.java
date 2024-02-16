@@ -23,6 +23,15 @@ public class GrayImage
   public int countWhitePixels()
   {
     /* to be implemented in part A */
+    int count = 0;
+    
+    for (int[] pixelRow : inxelValues) {
+      for (int pixel : pixelRow) {
+        count += pixel / 255;
+      }
+    }
+
+    return count;
   }
 
   // Part (b)
@@ -35,7 +44,14 @@ public class GrayImage
   public void processImage()
   {
     /* to be implemented in part B */
-
+    for (int row = 0; row < this.pixelValues.length-2; row++) {
+      for (int col = 0; col < this.pixelValues[0].length-2; col++) {
+        this.pixelValues[row][col] -= this.pixelValues[row+2][col+2];
+        if (this.pixelValues[row][col] < BLACK) {
+          this.pixelValues[row][col] = BLACK;
+        }
+      }
+    }
   }
 
   public String toString()
